@@ -45,7 +45,488 @@
     "description": "Button text to show device information"
   },
   "resetWifiDirect": "إعادة تعيين الواي فاي المباشر",
-    "@resetWifiDirect": {
-      "description": "Button text to reset WiFi Direct"
+  "@resetWifiDirect": {
+    "description": "Button text to reset WiFi Direct"
+  },
+  "noDevicesFound": "لم يتم العثور على أجهزة",
+  "@noDevicesFound": {
+    "description": "Message when no devices are found"
+  },
+  "tapScanForDevices": "اضغط على \"البحث عن الأجهزة\" للعثور على الأجهزة القريبة",
+  "@tapScanForDevices": {
+    "description": "Instruction text for scanning devices"
+  },
+  "availableDevices": "الأجهزة المتاحة ({count})",
+  "@availableDevices": {
+    "description": "Header for available devices list",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "description": "Number of available devices"
+      }
     }
+  },
+  "connect": "اتصال",
+  "@connect": {
+    "description": "Button text to connect to a device"
+  },
+  "disconnect": "قطع الاتصال",
+  "@disconnect": {
+    "description": "Button text to disconnect from a device"
+  },
+  "logs": "السجلات",
+  "@logs": {
+    "description": "Logs section header"
+  },
+  "clearLogs": "مسح السجلات",
+  "@clearLogs": {
+    "description": "Button text to clear logs"
+  },
+  "chat": "دردشة",
+  "@chat": {
+    "description": "Chat tab label"
+  },
+  "speedTest": "اختبار السرعة",
+  "@speedTest": {
+    "description": "Speed test tab label"
+  },
+  "fileTransfer": "نقل الملفات",
+  "@fileTransfer": {
+    "description": "File transfer tab label"
+  },
+  "settings": "الإعدادات",
+  "@settings": {
+    "description": "Settings tab label"
+  },
+  "connectedReadyToChat": "متصل - جاهز للدردشة",
+  "@connectedReadyToChat": {
+    "description": "Status when connected and ready to chat"
+  },
+  "notConnectedConnectToPeer": "غير متصل - اتصل بجهاز للبدء بالدردشة",
+  "@notConnectedConnectToPeer": {
+    "description": "Status when not connected to peer"
+  },
+  "host": "مضيف",
+  "@host": {
+    "description": "Host role indicator"
+  },
+  "client": "عميل",
+  "@client": {
+    "description": "Client role indicator"
+  },
+  "noMessagesYet": "لا توجد رسائل بعد",
+  "@noMessagesYet": {
+    "description": "Message when no chat messages exist"
+  },
+  "connectToPeerAndStartChatting": "اتصل بجهاز وابدأ الدردشة!",
+  "@connectToPeerAndStartChatting": {
+    "description": "Instruction to connect and start chatting"
+  },
+  "typeAMessage": "اكتب رسالة...",
+  "@typeAMessage": {
+    "description": "Chat input placeholder when connected"
+  },
+  "connectToStartChatting": "اتصل للبدء بالدردشة",
+  "@connectToStartChatting": {
+    "description": "Chat input placeholder when not connected"
+  },
+  "justNow": "الآن",
+  "@justNow": {
+    "description": "Timestamp for very recent messages"
+  },
+  "daysAgo": "منذ {count} يوم",
+  "@daysAgo": {
+    "description": "Days ago timestamp",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "hoursAgo": "منذ {count} ساعة",
+  "@hoursAgo": {
+    "description": "Hours ago timestamp",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "minutesAgo": "منذ {count} دقيقة",
+  "@minutesAgo": {
+    "description": "Minutes ago timestamp",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "pleaseConnectToPeerFirst": "يرجى الاتصال بجهاز أولاً",
+  "@pleaseConnectToPeerFirst": {
+    "description": "Error message when trying to send file without connection"
+  },
+  "fileSent": "تم إرسال الملف: {fileName}",
+  "@fileSent": {
+    "description": "Success message when file is sent",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToSendFile": "فشل في إرسال الملف: {error}",
+  "@failedToSendFile": {
+    "description": "Error message when file send fails",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "notConnected": "غير متصل",
+  "@notConnected": {
+    "description": "Connection status when not connected"
+  },
+  "readyForFileTransfer": "جاهز لنقل الملفات",
+  "@readyForFileTransfer": {
+    "description": "Status when ready for file transfer"
+  },
+  "connectToStartTransferringFiles": "اتصل للبدء بنقل الملفات",
+  "@connectToStartTransferringFiles": {
+    "description": "Instruction when not connected"
+  },
+  "sendFile": "إرسال ملف",
+  "@sendFile": {
+    "description": "Send file button text"
+  },
+  "receiveFiles": "استقبال الملفات",
+  "@receiveFiles": {
+    "description": "Receive files section title"
+  },
+  "filesWillBeAutomaticallyReceived": "سيتم استقبال الملفات تلقائياً عند إرسالها من الجهاز الآخر",
+  "@filesWillBeAutomaticallyReceived": {
+    "description": "Description of automatic file receiving"
+  },
+  "noActiveTransfers": "لا يوجد عمليات نقل نشطة",
+  "@noActiveTransfers": {
+    "description": "Message when no file transfers are active"
+  },
+  "uploadComplete": "اكتمل الرفع",
+  "@uploadComplete": {
+    "description": "Status when upload is complete"
+  },
+  "downloadComplete": "اكتمل التحميل",
+  "@downloadComplete": {
+    "description": "Status when download is complete"
+  },
+  "uploading": "جاري الرفع...",
+  "@uploading": {
+    "description": "Status when uploading"
+  },
+  "downloading": "جاري التحميل...",
+  "@downloading": {
+    "description": "Status when downloading"
+  },
+  "recentTransfers": "النقل الأخير",
+  "@recentTransfers": {
+    "description": "Recent transfers section title"
+  },
+  "noRecentTransfers": "لا يوجد نقل حديث",
+  "@noRecentTransfers": {
+    "description": "Message when no recent transfers exist"
+  },
+  "sent": "تم الإرسال",
+  "@sent": {
+    "description": "Label for sent files"
+  },
+  "received": "تم الاستلام",
+  "@received": {
+    "description": "Label for received files"
+  },
+  "openFile": "فتح الملف",
+  "@openFile": {
+    "description": "Tooltip for open file button"
+  },
+  "clear": "مسح",
+  "@clear": {
+    "description": "Tooltip for clear button"
+  },
+  "failedToOpenFile": "فشل في فتح الملف: {error}",
+  "@failedToOpenFile": {
+    "description": "Error message when file open fails",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "systemLogs": "سجلات النظام",
+  "@systemLogs": {
+    "description": "System logs section header"
+  },
+  "noLogsYet": "لا توجد سجلات بعد",
+  "@noLogsYet": {
+    "description": "Message when no logs exist"
+  },
+  "customizeYourWifiDirectExperience": "خصص تجربة الواي فاي المباشر",
+  "@customizeYourWifiDirectExperience": {
+    "description": "Settings page subtitle"
+  },
+  "transferSettings": "إعدادات النقل",
+  "@transferSettings": {
+    "description": "Transfer settings section title"
+  },
+  "transferTimeout": "مهلة النقل",
+  "@transferTimeout": {
+    "description": "Transfer timeout setting title"
+  },
+  "timeoutForFileTransfers": "مهلة نقل الملفات (ثواني)",
+  "@timeoutForFileTransfers": {
+    "description": "Transfer timeout setting description"
+  },
+  "appSettings": "إعدادات التطبيق",
+  "@appSettings": {
+    "description": "App settings section title"
+  },
+  "language": "اللغة",
+  "@language": {
+    "description": "Language setting title"
+  },
+  "chooseYourPreferredLanguage": "اختر لغتك المفضلة",
+  "@chooseYourPreferredLanguage": {
+    "description": "Language setting description"
+  },
+  "followSystem": "اتبع النظام",
+  "@followSystem": {
+    "description": "Follow system language option"
+  },
+  "english": "الإنجليزية",
+  "@english": {
+    "description": "English language option"
+  },
+  "darkMode": "الوضع الداكن",
+  "@darkMode": {
+    "description": "Dark mode setting title"
+  },
+  "useDarkTheme": "استخدم الوضع الداكن",
+  "@useDarkTheme": {
+    "description": "Dark mode setting description"
+  },
+  "about": "حول",
+  "@about": {
+    "description": "About section title"
+  },
+  "version": "الإصدار",
+  "@version": {
+    "description": "Version info title"
+  },
+  "privacyPolicy": "سياسة الخصوصية",
+  "@privacyPolicy": {
+    "description": "Privacy policy title"
+  },
+  "viewOurPrivacyPolicy": "عرض سياسة الخصوصية",
+  "@viewOurPrivacyPolicy": {
+    "description": "Privacy policy description"
+  },
+  "privacyPolicyContent": "يستخدم هذا التطبيق الواي فاي المباشر لإنشاء اتصالات بين الأجهزة. لا يتم إرسال أي بيانات إلى خوادم خارجية. جميع الاتصالات تحدث مباشرة بين الأجهزة.",
+  "@privacyPolicyContent": {
+    "description": "Privacy policy dialog content"
+  },
+  "ok": "موافق",
+  "@ok": {
+    "description": "OK button text"
+  },
+  "speedTestStatus": "حالة اختبار السرعة",
+  "@speedTestStatus": {
+    "description": "Speed test status title"
+  },
+  "readyToTestConnectionSpeed": "جاهز لاختبار سرعة الاتصال",
+  "@readyToTestConnectionSpeed": {
+    "description": "Status when ready to test speed"
+  },
+  "connectToPeerToTestSpeed": "اتصل بجهاز لاختبار السرعة",
+  "@connectToPeerToTestSpeed": {
+    "description": "Status when not connected for speed test"
+  },
+  "testing": "جاري الاختبار...",
+  "@testing": {
+    "description": "Speed test in progress text"
+  },
+  "start": "ابدأ",
+  "@start": {
+    "description": "Start speed test button text"
+  },
+  "tapToStartSpeedTest": "اضغط للبدء باختبار السرعة",
+  "@tapToStartSpeedTest": {
+    "description": "Instruction to start speed test"
+  },
+  "connectToPeerFirst": "اتصل بجهاز أولاً",
+  "@connectToPeerFirst": {
+    "description": "Instruction when not connected"
+  },
+  "downloadTest": "اختبار التحميل",
+  "@downloadTest": {
+    "description": "Download test phase label"
+  },
+  "uploadTest": "اختبار الرفع",
+  "@uploadTest": {
+    "description": "Upload test phase label"
+  },
+  "download": "تحميل",
+  "@download": {
+    "description": "Download label"
+  },
+  "upload": "رفع",
+  "@upload": {
+    "description": "Upload label"
+  },
+  "speed": "السرعة: {speed} ميجابايت/ثانية",
+  "@speed": {
+    "description": "Speed display format",
+    "placeholders": {
+      "speed": {
+        "type": "String"
+      }
+    }
+  },
+  "complete": "مكتمل",
+  "@complete": {
+    "description": "Complete status"
+  },
+  "inProgress": "قيد التنفيذ",
+  "@inProgress": {
+    "description": "In progress status"
+  },
+  "latestResults": "آخر النتائج",
+  "@latestResults": {
+    "description": "Latest results section title"
+  },
+  "testCompletedAt": "اكتمل الاختبار في",
+  "@testCompletedAt": {
+    "description": "Test completion time label"
+  },
+  "noTestResultsYet": "لا توجد نتائج اختبار بعد",
+  "@noTestResultsYet": {
+    "description": "Message when no test results exist"
+  },
+  "runSpeedTestToSeeResults": "قم بإجراء اختبار سرعة لرؤية النتائج هنا",
+  "@runSpeedTestToSeeResults": {
+    "description": "Instruction to run speed test"
+  },
+  "testHistory": "سجل الاختبارات",
+  "@testHistory": {
+    "description": "Test history section title"
+  },
+  "tests": "{count} اختبار",
+  "@tests": {
+    "description": "Number of tests format",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noTestHistory": "لا يوجد سجل اختبارات",
+  "@noTestHistory": {
+    "description": "Message when no test history exists"
+  },
+  "dayAgo": "منذ {count} يوم",
+  "@dayAgo": {
+    "description": "Single day ago format",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "daysAgoLong": "منذ {count} أيام",
+  "@daysAgoLong": {
+    "description": "Multiple days ago format",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "hourAgo": "منذ {count} ساعة",
+  "@hourAgo": {
+    "description": "Single hour ago format",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "hoursAgoLong": "منذ {count} ساعات",
+  "@hoursAgoLong": {
+    "description": "Multiple hours ago format",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "minuteAgo": "منذ {count} دقيقة",
+  "@minuteAgo": {
+    "description": "Single minute ago format",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "minutesAgoLong": "منذ {count} دقائق",
+  "@minutesAgoLong": {
+    "description": "Multiple minutes ago format",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "timeoutUnit": "ث",
+  "@timeoutUnit": {
+    "description": "Unit for timeout (seconds)"
+  },
+  "chinese": "الصينية",
+  "@chinese": {
+    "description": "Chinese language option"
+  },
+  "githubRepositories": "مستودعات GitHub",
+  "@githubRepositories": {
+    "description": "GitHub repositories section title"
+  },
+  "flutterAppRepository": "مستودع تطبيق Flutter",
+  "@flutterAppRepository": {
+    "description": "Flutter app repository title"
+  },
+  "flutterAppDescription": "تطبيق WDCable Flutter - تطبيق نقل الملفات عبر الواي فاي المباشر",
+  "@flutterAppDescription": {
+    "description": "Flutter app repository description"
+  },
+  "windowsAppRepository": "مستودع تطبيق Windows",
+  "@windowsAppRepository": {
+    "description": "Windows app repository title"
+  },
+  "windowsAppDescription": "تطبيق WDCableWUI - تطبيق Windows المصاحب",
+  "@windowsAppDescription": {
+    "description": "Windows app repository description"
+  },
+  "urlCopiedToClipboard": "تم نسخ الرابط إلى الحافظة: {url}",
+  "@urlCopiedToClipboard": {
+    "description": "Message shown when URL is copied to clipboard",
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsTitle": "الإعدادات",
+  "@settingsTitle": {
+    "description": "Settings page title"
+  },
+  "settingsSubtitle": "خصص تجربة الواي فاي المباشر",
+  "@settingsSubtitle": {
+    "description": "Settings page subtitle"
   }
+}
