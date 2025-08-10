@@ -25,10 +25,7 @@ class ConnectionTab extends StatelessWidget {
           // Control Buttons
           _buildControlButtons(context),
           // Peers List
-          SizedBox(
-            height: 300,
-            child: _buildPeersList(context),
-          ),
+          SizedBox(height: 300, child: _buildPeersList(context)),
           // Logs Section
           // _buildLogsSection(context),
         ],
@@ -64,15 +61,18 @@ class ConnectionTab extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  AppLocalizations.of(context)!.wifiP2pDriver,
-                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+                  AppLocalizations.of(context)?.wifiP2pDriver ??
+                      'WiFi P2P Driver',
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 Text(
                   state.isWifiP2pEnabled
-                      ? AppLocalizations.of(context)!.readyForConnections
-                      : AppLocalizations.of(context)!.disabledEnableWifi,
+                      ? AppLocalizations.of(context)?.readyForConnections ??
+                            'Ready for connections'
+                      : AppLocalizations.of(context)?.disabledEnableWifi ??
+                            'Disabled - Enable WiFi to continue',
                   style: TextStyle(
                     color: state.isWifiP2pEnabled ? Colors.green : Colors.red,
                     fontSize: 12,
@@ -111,10 +111,10 @@ class ConnectionTab extends StatelessWidget {
           ),
           const SizedBox(width: 8),
           Text(
-            '${AppLocalizations.of(context)!.connectionStatus}: ${state.connectionInfo?.isConnected == true ? AppLocalizations.of(context)!.connected : AppLocalizations.of(context)!.disconnected}',
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+            '${AppLocalizations.of(context)?.connectionStatus ?? 'Connection Status'}: ${state.connectionInfo?.isConnected == true ? AppLocalizations.of(context)?.connected ?? 'Connected' : AppLocalizations.of(context)?.disconnected ?? 'Disconnected'}',
+            style: Theme.of(
+              context,
+            ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
           ),
         ],
       ),
@@ -130,7 +130,9 @@ class ConnectionTab extends StatelessWidget {
             children: [
               Expanded(
                 child: ElevatedButton.icon(
-                  onPressed: state.isDiscovering ? null : controller.discoverPeers,
+                  onPressed: state.isDiscovering
+                      ? null
+                      : controller.discoverPeers,
                   icon: state.isDiscovering
                       ? const SizedBox(
                           width: 16,
@@ -138,7 +140,13 @@ class ConnectionTab extends StatelessWidget {
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
                       : const Icon(Icons.search),
-                  label: Text(state.isDiscovering ? AppLocalizations.of(context)!.scanning : AppLocalizations.of(context)!.scanForDevices),
+                  label: Text(
+                    state.isDiscovering
+                        ? AppLocalizations.of(context)?.scanning ??
+                              'Scanning...'
+                        : AppLocalizations.of(context)?.scanForDevices ??
+                              'Scan for Devices',
+                  ),
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                   ),
@@ -149,7 +157,9 @@ class ConnectionTab extends StatelessWidget {
                 child: ElevatedButton.icon(
                   onPressed: controller.stopDiscovery,
                   icon: const Icon(Icons.stop),
-                  label: Text(AppLocalizations.of(context)!.stopScan),
+                  label: Text(
+                    AppLocalizations.of(context)?.stopScan ?? 'Stop Scan',
+                  ),
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                   ),
@@ -164,7 +174,9 @@ class ConnectionTab extends StatelessWidget {
                 child: ElevatedButton.icon(
                   onPressed: controller.logDeviceSettings,
                   icon: const Icon(Icons.info),
-                  label: Text(AppLocalizations.of(context)!.deviceInfo),
+                  label: Text(
+                    AppLocalizations.of(context)?.deviceInfo ?? 'Device Info',
+                  ),
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                   ),
@@ -175,7 +187,10 @@ class ConnectionTab extends StatelessWidget {
                 child: ElevatedButton.icon(
                   onPressed: controller.resetWifiDirectSettings,
                   icon: const Icon(Icons.refresh),
-                  label: Text(AppLocalizations.of(context)!.resetWifiDirect),
+                  label: Text(
+                    AppLocalizations.of(context)?.resetWifiDirect ??
+                        'Reset WiFi Direct',
+                  ),
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     backgroundColor: Colors.orange,
@@ -196,26 +211,18 @@ class ConnectionTab extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.devices_other,
-              size: 64,
-              color: Colors.grey,
-            ),
+            const Icon(Icons.devices_other, size: 64, color: Colors.grey),
             const SizedBox(height: 16),
             Text(
-              AppLocalizations.of(context)!.noDevicesFound,
-              style: const TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-              ),
+              AppLocalizations.of(context)?.noDevicesFound ??
+                  'No devices found',
+              style: const TextStyle(fontSize: 16, color: Colors.grey),
             ),
             const SizedBox(height: 8),
             Text(
-              AppLocalizations.of(context)!.tapScanForDevices,
-              style: const TextStyle(
-                fontSize: 12,
-                color: Colors.grey,
-              ),
+              AppLocalizations.of(context)?.tapScanForDevices ??
+                  'Tap "Scan for Devices" to find nearby devices',
+              style: const TextStyle(fontSize: 12, color: Colors.grey),
             ),
           ],
         ),
@@ -244,10 +251,13 @@ class ConnectionTab extends StatelessWidget {
               ),
             ),
             child: Text(
-              AppLocalizations.of(context)!.availableDevices(state.peers.length),
-              style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+              AppLocalizations.of(
+                    context,
+                  )?.availableDevices(state.peers.length) ??
+                  'Available Devices (${state.peers.length})',
+              style: Theme.of(
+                context,
+              ).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
             ),
           ),
           Expanded(
@@ -277,10 +287,7 @@ class ConnectionTab extends StatelessWidget {
                     children: [
                       Text(
                         peer.deviceAddress,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey[600],
-                        ),
+                        style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                       ),
                       const SizedBox(height: 2),
                       Container(
@@ -313,7 +320,7 @@ class ConnectionTab extends StatelessWidget {
                       minimumSize: Size.zero,
                     ),
                     child: Text(
-                      AppLocalizations.of(context)!.connect,
+                      AppLocalizations.of(context)?.connect ?? 'Connect',
                       style: TextStyle(fontSize: 12),
                     ),
                   ),
@@ -343,66 +350,66 @@ class ConnectionTab extends StatelessWidget {
   //     child: Column(
   //       crossAxisAlignment: CrossAxisAlignment.start,
   //       children: [
-          // Container(
-          //   width: double.infinity,
-          //   padding: const EdgeInsets.all(12),
-          //   decoration: BoxDecoration(
-          //     color: Theme.of(context).colorScheme.surfaceVariant,
-          //     borderRadius: const BorderRadius.only(
-          //       topLeft: Radius.circular(30),
-          //       topRight: Radius.circular(8),
-          //     ),
-          //   ),
-          //   child: Row(
-          //     children: [
-          //       const Icon(Icons.terminal, size: 16),
-          //       const SizedBox(width: 8),
-          //       Text(
-          //         AppLocalizations.of(context)!.systemLogs,
-          //         style: Theme.of(context).textTheme.titleSmall?.copyWith(
-          //           fontWeight: FontWeight.bold,
-          //         ),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-          // Expanded(
-          //   child: state.logs.isEmpty
-          //       ? Center(
-          //           child: Text(
-          //             AppLocalizations.of(context)!.noLogsYet,
-          //             style: TextStyle(color: Colors.grey),
-          //           ),
-          //         )
-          //       : SingleChildScrollView(
-          //           padding: const EdgeInsets.all(8),
-          //           child: SelectableText(
-          //             state.logs.join('\n'),
-          //             style: const TextStyle(
-          //               fontSize: 11,
-          //               fontFamily: 'monospace',
-          //             ),
-          //           ),
-          //         ),
-    //       // ),
-    //     ],
-    //   ),
-    // );
-  }
+  // Container(
+  //   width: double.infinity,
+  //   padding: const EdgeInsets.all(12),
+  //   decoration: BoxDecoration(
+  //     color: Theme.of(context).colorScheme.surfaceVariant,
+  //     borderRadius: const BorderRadius.only(
+  //       topLeft: Radius.circular(30),
+  //       topRight: Radius.circular(8),
+  //     ),
+  //   ),
+  //   child: Row(
+  //     children: [
+  //       const Icon(Icons.terminal, size: 16),
+  //       const SizedBox(width: 8),
+  //       Text(
+  //         AppLocalizations.of(context)!.systemLogs,
+  //         style: Theme.of(context).textTheme.titleSmall?.copyWith(
+  //           fontWeight: FontWeight.bold,
+  //         ),
+  //       ),
+  //     ],
+  //   ),
+  // ),
+  // Expanded(
+  //   child: state.logs.isEmpty
+  //       ? Center(
+  //           child: Text(
+  //             AppLocalizations.of(context)!.noLogsYet,
+  //             style: TextStyle(color: Colors.grey),
+  //           ),
+  //         )
+  //       : SingleChildScrollView(
+  //           padding: const EdgeInsets.all(8),
+  //           child: SelectableText(
+  //             state.logs.join('\n'),
+  //             style: const TextStyle(
+  //               fontSize: 11,
+  //               fontFamily: 'monospace',
+  //             ),
+  //           ),
+  //         ),
+  //       // ),
+  //     ],
+  //   ),
+  // );
+}
 
-  Color _getStatusColor(int status) {
-    switch (status) {
-      case 0: // Connected
-        return Colors.green;
-      case 1: // Invited
-        return Colors.orange;
-      case 2: // Failed
-        return Colors.red;
-      case 3: // Available
-        return Colors.blue;
-      case 4: // Unavailable
-        return Colors.grey;
-      default:
-        return Colors.grey;
-    }
+Color _getStatusColor(int status) {
+  switch (status) {
+    case 0: // Connected
+      return Colors.green;
+    case 1: // Invited
+      return Colors.orange;
+    case 2: // Failed
+      return Colors.red;
+    case 3: // Available
+      return Colors.blue;
+    case 4: // Unavailable
+      return Colors.grey;
+    default:
+      return Colors.grey;
   }
+}

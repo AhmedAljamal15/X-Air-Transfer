@@ -35,12 +35,7 @@ dependencies:
   intl: any
   provider: ^6.1.5
 
-flutter:
-  generate: true
-  uses-material-design: true
-  assets:
-    - assets/
-    
+
 flutter_intl:
   enabled: true
   class_name: AppLocalizations
@@ -73,6 +68,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  generate: true
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
