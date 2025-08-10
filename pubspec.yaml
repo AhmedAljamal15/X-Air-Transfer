@@ -35,6 +35,20 @@ dependencies:
   intl: any
   provider: ^6.1.5
 
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/
+    
+flutter_intl:
+  enabled: true
+  class_name: AppLocalizations
+  main_locale: en
+  arb_dir: lib/l10n
+  output_dir: lib/l10n
+  use_deferred_loading: false
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8

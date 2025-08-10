@@ -1,0 +1,51 @@
+{
+  "@@locale": "ar",
+  "appTitle": "كيبل واي فاي المباشر",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "wifiP2pDriver": "مشغل واي فاي المباشر",
+  "@wifiP2pDriver": {
+    "description": "WiFi P2P driver status label"
+  },
+  "readyForConnections": "جاهز للاتصال",
+  "@readyForConnections": {
+    "description": "Status when WiFi P2P is enabled"
+  },
+  "disabledEnableWifi": "معطل - قم بتفعيل الواي فاي للمتابعة",
+  "@disabledEnableWifi": {
+    "description": "Status when WiFi P2P is disabled"
+  },
+  "connectionStatus": "حالة الاتصال",
+  "@connectionStatus": {
+    "description": "Connection status label"
+  },
+  "connected": "متصل",
+  "@connected": {
+    "description": "Connected status"
+  },
+  "disconnected": "غير متصل",
+  "@disconnected": {
+    "description": "Disconnected status"
+  },
+  "scanForDevices": "البحث عن الأجهزة",
+  "@scanForDevices": {
+    "description": "Button text to scan for devices"
+  },
+  "scanning": "جاري البحث...",
+  "@scanning": {
+    "description": "Text shown when scanning for devices"
+  },
+  "stopScan": "إيقاف البحث",
+  "@stopScan": {
+    "description": "Button text to stop scanning"
+  },
+  "deviceInfo": "معلومات الجهاز",
+  "@deviceInfo": {
+    "description": "Button text to show device information"
+  },
+  "resetWifiDirect": "إعادة تعيين الواي فاي المباشر",
+    "@resetWifiDirect": {
+      "description": "Button text to reset WiFi Direct"
+    }
+  }
